@@ -1,0 +1,79 @@
+import java.util.Scanner;
+ 
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+ 
+        System.out.print("Enter your name: ");
+        String name = input.nextLine();
+ 
+        System.out.print("Enter your age: ");
+        String age = input.nextLine();
+ 
+        System.out.print("Enter your address: ");
+        String address = input.nextLine();
+ 
+        System.out.print("Enter your weight: ");
+        String weight = input.nextLine();
+ 
+        System.out.print("Enter your height: ");
+        String height = input.nextLine();
+ 
+        System.out.println("My name is " + name + ", I am " + age +
+        " years old, I live in " + address + ", I weigh " + weight +
+        " kg, and my height is " + height + " cm.");
+    }
+}
+
+
+import java.util.Scanner;
+ 
+public class Main {
+    public static void main(String[] args) {
+ 
+        Scanner input = new Scanner(System.in);
+ 
+        double x, y, answer;
+        char operator;
+ 
+        System.out.print("Enter value of x: ");
+        x = input.nextDouble();
+ 
+        System.out.print("Enter value of y: ");
+        y = input.nextDouble();
+ 
+        System.out.println("Choose an operator (+, -, *, /): ");
+        operator = input.next().charAt(0);
+ 
+        switch(operator) {
+ 
+            case '+':
+                answer = x + y;
+                System.out.println("Answer: " + answer);
+                break;
+ 
+            case '-':
+                answer = x - y;
+                System.out.println("Answer: " + answer);
+                break;
+ 
+            case '*':
+                answer = x * y;
+                System.out.println("Answer: " + answer);
+                break;
+ 
+            case '/':
+                if(y != 0) {
+                    answer = x / y;
+                    System.out.println("Answer: " + answer);
+                } else {
+                    System.out.println("Cannot divide by zero.");
+                }
+                break;
+ 
+            default:
+                System.out.println("Invalid operator.");
+        }
+    }
+}
+ 
